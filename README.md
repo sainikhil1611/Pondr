@@ -1,6 +1,6 @@
 # Pondr — AI-Powered Adaptive Learning Platform
 
-> Built for the **Dallas AI Hackathon 2026** (Tracks: Dallas AI + Data Science / ML)
+> Built for the **HackAI Hackathon 2026** (Tracks: Dallas AI)
 
 Pondr is an intelligent learning platform that uses a **knowledge graph canvas**, **ML-based knowledge decay prediction**, and **Google Gemini AI** to personalize how you learn — and when you review — so nothing you study ever truly fades.
 
