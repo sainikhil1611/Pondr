@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cogni-bg text-white;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0D1B2A;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1E3A5F;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2E86AB;
+  }
+}
+
+@layer components {
+  .cogni-card {
+    @apply bg-cogni-card border border-cogni-border rounded-2xl p-5;
+  }
+
+  .cogni-card-hover {
+    @apply cogni-card transition-all duration-200 hover:border-cogni-accent/40 hover:shadow-lg hover:shadow-cogni-accent/5;
+  }
+
+  .cogni-btn-primary {
+    @apply bg-cogni-accent hover:bg-cogni-accent-light text-white font-semibold py-2.5 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cogni-accent/25;
+  }
+
+  .cogni-btn-secondary {
+    @apply bg-cogni-card border border-cogni-border text-white font-medium py-2.5 px-6 rounded-xl transition-all duration-200 hover:border-cogni-accent/40;
+  }
+
+  .cogni-label {
+    @apply text-[10px] font-bold uppercase tracking-[0.15em] text-cogni-teal;
+  }
+
+  .cogni-label-purple {
+    @apply text-[10px] font-bold uppercase tracking-[0.15em] text-cogni-accent;
+  }
+
+  .cogni-gradient-text {
+    @apply bg-gradient-to-r from-cogni-accent to-cogni-teal bg-clip-text text-transparent;
+  }
+
+  .cogni-sidebar {
+    @apply w-56 bg-cogni-card/50 border-r border-cogni-border min-h-screen p-4 flex flex-col;
+  }
+
+  .cogni-nav-item {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-white/60 transition-all duration-200 hover:text-white hover:bg-white/5 cursor-pointer;
+  }
+
+  .cogni-nav-item-active {
+    @apply cogni-nav-item text-white bg-cogni-accent/20 border border-cogni-accent/30;
+  }
+
+  .cogni-input {
+    @apply bg-cogni-card border border-cogni-border rounded-xl px-4 py-2.5 text-white placeholder-white/30 focus:outline-none focus:border-cogni-accent/50 focus:ring-1 focus:ring-cogni-accent/25 transition-all duration-200;
+  }
+
+  .cogni-badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider;
+  }
+
+  .cogni-progress-bar {
+    @apply h-1 rounded-full bg-cogni-border overflow-hidden;
+  }
+
+  .cogni-progress-fill {
+    @apply h-full rounded-full bg-gradient-to-r from-cogni-accent to-cogni-teal transition-all duration-500;
+  }
+}

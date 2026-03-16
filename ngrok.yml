@@ -1,0 +1,40 @@
+version: 3
+
+tunnels:
+  pondr:
+    proto: http
+    addr: 8000
+    traffic_policy:
+      on_http_request:
+        # Rate limit: 30 requests per minute per client IP
+        - actions:
+            - type: rate-limit
+          config:
+            name: api_rate_limit
+            algorithm: sliding_window
+            capacity: 30
+            rate: 60s
+            bucket_key:
+              - conn.client_ip
+
+        # Block requests with bodies larger than 5MB
+        - expressions:
+            - req.content_length > 5242880
+          actions:
+            - type: custom-response
+          config:
+            status_code: 413
+            content: '{"detail": "Request body too large. Max 5MB."}'
+            headers:
+              content-type: application/json
+
+        # Only allow safe HTTP methods
+        - expressions:
+            - "req.method in ['PUT', 'DELETE']"
+          actions:
+            - type: custom-response
+          config:
+            status_code: 405
+            content: '{"detail": "Method not allowed."}'
+            headers:
+              content-type: application/json

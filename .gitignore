@@ -1,0 +1,51 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# ML Artifacts
+backend/ml/decay_model.joblib
+backend/ml/dataset.csv
+backend/ml/metrics.json
+*.joblib
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.cache/
+.npm
+
+# IDE / Editor
+.vscode/
+.idea/
+.claude/
+.cursor/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temp / extraction scripts
+extract_doc.py
+extract_doc2.py
+doc_output.txt
+doc_paragraphs.txt
+doc_tables.txt
