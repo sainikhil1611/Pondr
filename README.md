@@ -432,7 +432,7 @@ The backend automatically adds the `NGROK_URL` to CORS allowed origins and also 
 ## Project Structure
 
 ```
-HackAI2026/
+Pondr/
 ├── .env                          # API keys (never commit)
 ├── example.env                   # Environment template
 ├── CLAUDE.md                     # Development guide
@@ -499,47 +499,6 @@ HackAI2026/
             ├── calendar/         # WeekView
             └── ui/               # Sidebar, MetricsPanel
 ```
-
----
-
-## Gamification System
-
-### XP Awards
-
-| Action | XP |
-|---|---|
-| Watch video snippet | +40 |
-| Complete Quick Quiz | +80 |
-| Feynman Challenge | +120 |
-| Socratic Debate (per round) | +150 |
-| Complete full Socratic (3+ rounds) | +450 |
-| Daily login | +25 |
-| Streak bonus | +10 × streak_days |
-
-### Level Progression
-
-| Level | Title | XP Required |
-|---|---|---|
-| 1–5 | Novice | 0 – 1,000 |
-| 6–10 | Explorer | 1,001 – 3,000 |
-| 11–20 | Pathfinder | 3,001 – 8,000 |
-| 21–30 | Scholar | 8,001 – 18,000 |
-| 31–40 | Master | 18,001 – 35,000 |
-| 41–50 | Sage | 35,001+ |
-
-### Achievements
-
-| Achievement | Condition | Rarity |
-|---|---|---|
-| First Steps | Complete first learning event | Common |
-| Feynman Apprentice | 5 Feynman challenges | Common |
-| Debate Champion | Win 10 Socratic debates | Rare |
-| Streak Fire | 7-day streak | Rare |
-| Decay Slayer | Recover 5 fading concepts | Epic |
-| Graph Explorer | Unlock 20 nodes | Epic |
-| Speed Demon | 3 Quick Snapshots in < 90s | Rare |
-| Knowledge Keeper | 90%+ retention for 7 days | Legendary |
-
 ---
 
 ## Auth Flow
